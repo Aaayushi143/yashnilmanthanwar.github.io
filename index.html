@@ -19,7 +19,6 @@
       font-family: 'Open Sans', sans-serif;
       color: #333;
       min-height: 100vh;
-      position: relative;
       background-color: #fdfdfd;
       overflow-x: hidden;
     }
@@ -33,7 +32,7 @@
       background-repeat: repeat;
       background-size: 300px, 350px;
       background-position: top left, bottom right;
-      opacity: 0.12;
+      opacity: 0.4;
       z-index: -1;
       animation: bgmove 20s linear infinite alternate;
     }
@@ -117,10 +116,11 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
-   .insta { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .insta { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
     .whatsapp { background-color: #128C7E; }
     .email { background-color: #005DA0; }
     .phone { background-color: #222; }
+    .nav-btn { background-color: #6C63FF; }
 
     footer {
       margin-top: 3rem;
@@ -128,7 +128,6 @@
       color: #777;
     }
 
-    /* Skills Section */
     .skills {
       margin-top: 3rem;
       animation: fadeIn 1.5s ease;
@@ -156,7 +155,6 @@
       animation: popIn 1s ease;
     }
 
-    /* Floating WhatsApp Icon */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -187,6 +185,7 @@
       Passionate about learning, innovation, and bringing ideas to life.
     </p>
 
+    <!-- Main Buttons -->
     <div class="buttons">
       <a href="https://instagram.com/yashnil_099" target="_blank" class="insta">
         <i class="fab fa-instagram"></i> Instagram
@@ -202,6 +201,17 @@
       </a>
     </div>
 
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+      <a href="about.html" class="nav-btn">
+        <i class="fas fa-user"></i> About Me
+      </a>
+      <a href="favourite.html" class="nav-btn">
+        <i class="fas fa-star"></i> Favourite
+      </a>
+    </div>
+
+    <!-- Skills Section -->
     <div class="skills">
       <h2>Skills</h2>
       <ul>
@@ -218,6 +228,7 @@
     </footer>
   </div>
 
+  <!-- Floating WhatsApp -->
   <a href="https://wa.me/919322410521" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
