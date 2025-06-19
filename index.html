@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yashnil Manthanwar</title>
 
-  <!-- 👇 Google Fonts -->
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/jpeg" href="FAVICON.JPG" />
+
+  <!-- ✅ Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&family=Rubik:wght@500&display=swap" rel="stylesheet">
-  <!-- 👇 Font Awesome for Icons -->
+
+  <!-- ✅ Font Awesome for Icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
@@ -16,10 +20,11 @@
       font-family: 'Open Sans', sans-serif;
       color: #333;
       min-height: 100vh;
-      position: relative;
       overflow: hidden;
+      position: relative;
     }
 
+    /* 🔥 Background collage with 2 images */
     body::before {
       content: "";
       position: fixed;
@@ -63,53 +68,32 @@
     }
 
     p.bio {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1.15rem;
+      font-family: 'Rubik', sans-serif;
+      font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto 2rem;
       line-height: 1.7;
     }
 
     .buttons a {
-      font-family: 'Rubik', sans-serif;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       margin: 0.5rem;
       padding: 0.75rem 1.5rem;
-      border-radius: 25px;
+      border-radius: 30px;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 1rem;
       color: white;
-      position: relative;
+      font-family: 'Rubik', sans-serif;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      letter-spacing: 0.5px;
-    }
-
-    .buttons a i {
-      margin-right: 8px;
-    }
-
-    .buttons a::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 25px;
-      background: inherit;
-      filter: blur(8px);
-      opacity: 0;
-      transition: 0.3s;
-      z-index: -1;
     }
 
     .buttons a:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    .buttons a:hover::before {
-      opacity: 0.8;
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
     .insta { background-color: #E1306C; }
@@ -121,13 +105,8 @@
     .email { background-color: #0072C6; }
     .email:hover { background-color: #005da0; }
 
-    .mobile {
-      margin-top: 1.5rem;
-      font-size: 1.1rem;
-      color: #444;
-      font-family: 'Rubik', sans-serif;
-      font-weight: 500;
-    }
+    .phone { background-color: #444; }
+    .phone:hover { background-color: #222; }
 
     footer {
       margin-top: 3rem;
@@ -142,11 +121,11 @@
     <img src="YASHNIL.JPG" alt="Yashnil Manthanwar" class="YASHNIL-img" />
     <h1>Yashnil Manthanwar</h1>
     <p class="bio">
-      I'm a graphic designer with a poet's heart, transforming your brand's story into captivating
-      visuals. Having served as a Product Management Head at IndianMall, I bring a unique blend of
-      business acumen and creative flair. My designs are fueled by an insatiable love for learning and a
-      passion for bringing ideas to life.
+      I'm a graphic designer with a poet's heart, transforming your brand's story into captivating visuals.
+      Having served as Product Management Head at IndianMall, I blend business skills with creative flair.
+      Passionate about learning, innovation, and bringing ideas to life.
     </p>
+
     <div class="buttons">
       <a href="https://instagram.com/yashnil._" target="_blank" class="insta">
         <i class="fab fa-instagram"></i> Instagram
@@ -157,10 +136,9 @@
       <a href="mailto:manthanwaryashnil@gmail.com" class="email">
         <i class="fas fa-envelope"></i> Email
       </a>
-    </div>
-
-    <div class="mobile">
-      📞 +91 93224 10521
+      <a href="tel:+919322410521" class="phone">
+        <i class="fas fa-phone"></i> Call Me
+      </a>
     </div>
 
     <footer>
