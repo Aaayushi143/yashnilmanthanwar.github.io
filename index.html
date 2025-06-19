@@ -4,30 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yashnil Manthanwar</title>
+
+  <!-- 👇 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: #333;
       min-height: 100vh;
       position: relative;
       overflow: hidden;
     }
 
-    /* 🔥 Background collage with only 2 images */
+    /* 🔥 Background collage with 2 images */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background-image: 
-        url('img1.jpg'),
-        url('img2.jpg');
+      background-image: url('img1.jpg'), url('img2.jpg');
       background-repeat: repeat;
       background-size: 300px, 350px;
       background-position: top left, bottom right;
-      opacity: 0.40;
+      opacity: 0.12;
       z-index: -1;
     }
 
@@ -53,15 +55,17 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
       margin-bottom: 0.5rem;
+      color: #222;
     }
 
     p.bio {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       max-width: 700px;
       margin: 0 auto 2rem;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .buttons a {
@@ -70,9 +74,10 @@
       padding: 0.75rem 1.5rem;
       border-radius: 25px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       transition: background 0.3s;
       color: white;
+      font-family: 'Poppins', sans-serif;
     }
 
     .insta { background-color: #E1306C; }
@@ -86,6 +91,7 @@
       margin-top: 3rem;
       font-size: 0.9rem;
       color: #777;
+      font-family: 'Poppins', sans-serif;
     }
   </style>
 </head>
