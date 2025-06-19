@@ -8,15 +8,36 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9;
       color: #333;
     }
+
+    /* 🔥 Collage Background with 2 images */
+    .background-collage {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        url('img1.jpg'),
+        url('img2.jpg');
+      background-size: 300px;
+      background-repeat: repeat;
+      opacity: 0.08;
+      z-index: -1;
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
       padding: 2rem;
       text-align: center;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      margin-top: 3rem;
     }
+
     .YASHNIL-img {
       width: 180px;
       height: 180px;
@@ -25,16 +46,19 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       margin-bottom: 1rem;
     }
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
+
     p.bio {
       font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto 2rem;
       line-height: 1.6;
     }
+
     .buttons a {
       display: inline-block;
       margin: 0.5rem;
@@ -45,12 +69,14 @@
       transition: background 0.3s;
       color: white;
     }
+
     .insta { background-color: #E1306C; }
     .insta:hover { background-color: #c42c5f; }
     .whatsapp { background-color: #25D366; }
     .whatsapp:hover { background-color: #20b358; }
     .email { background-color: #0072C6; }
     .email:hover { background-color: #005da0; }
+
     footer {
       margin-top: 4rem;
       font-size: 0.9rem;
@@ -59,8 +85,10 @@
   </style>
 </head>
 <body>
+  <div class="background-collage"></div>
+
   <div class="container">
-    <img src="YASHNIL.JPG" alt="Yashnil Manthanwar" class="profile-img" />
+    <img src="YASHNIL.JPG" alt="Yashnil Manthanwar" class="YASHNIL-img" />
     <h1>Yashnil Manthanwar</h1>
     <p class="bio">
       A curious and determined individual who loves to explore and learn new things every day.
