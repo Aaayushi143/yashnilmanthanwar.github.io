@@ -4,49 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yashnil Manthanwar</title>
-
-  <!-- ✅ Favicon -->
   <link rel="icon" type="image/jpeg" href="FAVIKON.jpg" />
 
-  <!-- ✅ Google Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&family=Rubik:wght@500&display=swap" rel="stylesheet">
 
-  <!-- ✅ Font Awesome -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
       color: #333;
       min-height: 100vh;
-      background-color: #f2f2f2;
+      position: relative;
+      background-color: #fdfdfd;
       overflow-x: hidden;
     }
 
-    /* 🔥 Background collage */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       background-image: url('img1.jpg'), url('img2.jpg');
       background-repeat: repeat;
       background-size: 300px, 350px;
       background-position: top left, bottom right;
-      opacity: 0.4;
+      opacity: 0.12;
       z-index: -1;
-      animation: bgFade 20s infinite alternate;
+      animation: bgmove 20s linear infinite alternate;
     }
 
-    @keyframes bgFade {
-      0% { opacity: 0.08; }
-      100% { opacity: 0.15; }
+    @keyframes bgmove {
+      0% { background-position: 0 0, 100% 100%; }
+      100% { background-position: 50px 50px, 90% 90%; }
     }
 
     .container {
@@ -56,19 +50,13 @@
       text-align: center;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      animation: fadeInUp 1s ease-out both;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1.2s ease;
     }
 
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .YASHNIL-img {
@@ -76,28 +64,21 @@
       height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       margin-bottom: 1rem;
-      animation: zoomIn 1s ease-out 0.4s both;
+      animation: popIn 1.5s ease;
     }
 
-    @keyframes zoomIn {
-      0% {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
       margin-bottom: 0.5rem;
-      color: #111;
-      animation: fadeInUp 0.8s ease-out 0.6s both;
+      color: #222;
     }
 
     p.bio {
@@ -105,9 +86,8 @@
       font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto 2rem;
-      line-height: 1.8;
-      color: #444;
-      animation: fadeInUp 0.8s ease-out 0.8s both;
+      line-height: 1.7;
+      animation: fadeIn 1.6s ease-in-out;
     }
 
     .buttons a {
@@ -115,71 +95,85 @@
       align-items: center;
       gap: 0.6rem;
       margin: 0.5rem;
-      padding: 0.8rem 1.8rem;
-      border-radius: 35px;
+      padding: 0.75rem 1.6rem;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
       color: white;
       font-family: 'Rubik', sans-serif;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
-      transform: translateY(20px);
-      opacity: 0;
-      animation: fadeUpBtn 0.7s ease-out forwards;
+      animation: slideUp 1s ease-in-out;
     }
 
-    .buttons a:nth-child(1) { animation-delay: 1s; }
-    .buttons a:nth-child(2) { animation-delay: 1.2s; }
-    .buttons a:nth-child(3) { animation-delay: 1.4s; }
-    .buttons a:nth-child(4) { animation-delay: 1.6s; }
-
-    @keyframes fadeUpBtn {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .buttons a:hover {
-      transform: scale(1.07);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      transform: scale(1.07) translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
-    .insta {
-      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    }
-
-    .whatsapp { background-color: #128C7E; }
-    .email { background-color: #005DA0; }
-    .phone { background-color: #222; }
+    .insta { background-color: #E1306C; }
+    .whatsapp { background-color: #25D366; }
+    .email { background-color: #0072C6; }
+    .phone { background-color: #444; }
 
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
       color: #777;
-      font-family: 'Open Sans', sans-serif;
-      animation: fadeInUp 1s ease-out 2s both;
     }
 
-    @media (max-width: 600px) {
-      .YASHNIL-img {
-        width: 140px;
-        height: 140px;
-      }
+    /* Skills Section */
+    .skills {
+      margin-top: 3rem;
+      animation: fadeIn 1.5s ease;
+    }
 
-      h1 {
-        font-size: 2.2rem;
-      }
+    .skills h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
 
-      p.bio {
-        font-size: 1rem;
-      }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
 
-      .buttons a {
-        padding: 0.7rem 1.4rem;
-        font-size: 0.95rem;
-      }
+    .skills li {
+      display: inline-block;
+      background: #f0f0f0;
+      margin: 0.4rem;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: 1rem;
+      animation: popIn 1s ease;
+    }
+
+    /* Floating WhatsApp Icon */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px;
+      border-radius: 50%;
+      font-size: 24px;
+      z-index: 100;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
@@ -208,9 +202,24 @@
       </a>
     </div>
 
+    <div class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>🎨 Graphic Design</li>
+        <li>📱 UI/UX Design</li>
+        <li>✍️ Poetry</li>
+        <li>📊 Product Management</li>
+        <li>📷 Visual Storytelling</li>
+      </ul>
+    </div>
+
     <footer>
       © 2025 Yashnil Manthanwar. All rights reserved.
     </footer>
   </div>
+
+  <a href="https://wa.me/919322410521" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>
