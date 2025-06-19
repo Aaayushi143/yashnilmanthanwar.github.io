@@ -7,6 +7,8 @@
 
   <!-- 👇 Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <!-- 👇 Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
     body {
@@ -18,7 +20,6 @@
       overflow: hidden;
     }
 
-    /* 🔥 Background collage with 2 images */
     body::before {
       content: "";
       position: fixed;
@@ -29,7 +30,7 @@
       background-repeat: repeat;
       background-size: 300px, 350px;
       background-position: top left, bottom right;
-      opacity: 0.40;
+      opacity: 0.12;
       z-index: -1;
     }
 
@@ -84,6 +85,10 @@
       letter-spacing: 0.5px;
     }
 
+    .buttons a i {
+      margin-right: 8px;
+    }
+
     .buttons a::before {
       content: "";
       position: absolute;
@@ -116,6 +121,14 @@
     .email { background-color: #0072C6; }
     .email:hover { background-color: #005da0; }
 
+    .mobile {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      color: #444;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+    }
+
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
@@ -135,10 +148,21 @@
       passion for bringing ideas to life.
     </p>
     <div class="buttons">
-      <a href="https://instagram.com/yashnil._" target="_blank" class="insta">Instagram</a>
-      <a href="https://wa.me/919322410521" target="_blank" class="whatsapp">WhatsApp</a>
-      <a href="mailto:manthanwaryashnil@gmail.com" class="email">Email</a>
+      <a href="https://instagram.com/yashnil._" target="_blank" class="insta">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://wa.me/919322410521" target="_blank" class="whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="mailto:manthanwaryashnil@gmail.com" class="email">
+        <i class="fas fa-envelope"></i> Email
+      </a>
     </div>
+
+    <div class="mobile">
+      📞 +91 93224 10521
+    </div>
+
     <footer>
       © 2025 Yashnil Manthanwar. All rights reserved.
     </footer>
